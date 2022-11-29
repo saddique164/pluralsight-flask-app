@@ -29,7 +29,8 @@ pipeline {
     }
 
     stage ("build and push docker image") {steps{
-         
+          sh 'pwd'
+          sh 'ls -ltr'
         script {
     
            docker.withRegistry('https://registry.hub.docker.com', 'd243402c-7f0e-4879-b2ec-b2252033b77a') {
