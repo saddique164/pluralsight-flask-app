@@ -2,7 +2,7 @@ FROM python:3.9.15-slim-bullseye
 
 WORKDIR /app
 
-COPY requirments.txt /app
+COPY ${WORKSPACE}//requirements.txt /app
 
 RUN pip install -r /app/requirements.txt
 
