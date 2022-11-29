@@ -1,6 +1,6 @@
 // Uses Declarative syntax to run commands inside a container.
 pipeline {
-   agent {	node { label "master" } }
+   agent { node { label "master" } }
     environment{
        
 		NAME_DEPLOY  = "flask-app"
