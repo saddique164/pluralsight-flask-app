@@ -1,3 +1,5 @@
+FROM python:3.9.15-slim-bullseye
+
 WORKDIR /app
 
 ENV FLASK_APP=/app/flashcards.py
