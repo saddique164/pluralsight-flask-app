@@ -23,7 +23,7 @@ pipeline {
         stage ('build the python code'){
         steps { 
             git credentialsId: 'd243402c-7f0e-4879-b2ec-b2252033b77a', url: 'https://github.com/saddique164/pluralsight-flask-app.git'
-            sh 'pip3 install -r ${WORKSPACE}//app//requirements.txt'
+            sh 'pip3 install -r ${WORKSPACE}//requirements.txt'
         }
         
     }
