@@ -6,6 +6,6 @@ COPY ${WORKSPACE}//requirements.txt /app
 
 RUN pip install -r /app/requirements.txt
 
-COPY . /app/
+COPY ${WORKSPACE}/* /app/
 
 CMD ["python","./app/flashcards.py"]
