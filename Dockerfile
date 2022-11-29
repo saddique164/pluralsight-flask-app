@@ -1,9 +1,15 @@
-FROM python:3.9.15-slim-bullseye
-
 WORKDIR /app
 
-COPY . /app/
+ENV FLASK_APP=/app/flashcards.py
+
+ENV FLASK_RUN_HOST=0.0.0.0
+
+COPY requirements.txt /app
 
 RUN pip3 install -r /app/requirements.txt
 
-CMD ["python","./app/flashcards.py"]
+COPY . /app/
+
+EXPOSE 5000
+
+CMD ["flask","run"]
